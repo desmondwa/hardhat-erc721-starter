@@ -9,6 +9,9 @@ import "@nomiclabs/hardhat-etherscan";
 import "hardhat-typechain";
 import "solidity-coverage";
 
+
+
+
 task("accounts", "Prints the list of accounts", async (args, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -35,20 +38,18 @@ const config: HardhatUserConfig = {
     rinkeby: {
       url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [RINKEBY_PRIVATE_KEY],
-      gasPrice: 50000000000, // 50 gwei,
+      gasPrice: 80000000000, // 50 gwei,
     },
     ropsten: {
       url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [ROPSTEN_PRIVATE_KEY],
-      gasPrice: 50000000000, // 50 gwei,
+      gasPrice: 80000000000, // 50 gwei,
     },
     coverage: {
       url: "http://127.0.0.1:8555", // Coverage launches its own ganache-cli client
     },
   },
   etherscan: {
-    // Your API key for Etherscan
-    // Obtain one at https://etherscan.io/
     apiKey: ETHERSCAN_API_KEY,
   },
 };

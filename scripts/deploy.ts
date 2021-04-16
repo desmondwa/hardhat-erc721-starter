@@ -24,7 +24,7 @@ interface TokenPrototype {
 async function main() {
   [deployer, Artist2, Artist1, Beadwork, Araphahoe] = await ethers.getSigners();
   abcFactory = (await ethers.getContractFactory(
-    'ABC',
+    'token',
     deployer
   )) as ABC__factory;
   abc = (await upgrades.deployProxy(

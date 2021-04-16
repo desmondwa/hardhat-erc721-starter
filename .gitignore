@@ -8,3 +8,9 @@ coverage*
 .openzeppelin
 package-lock.json
 
+
+node_modules
+
+#Hardhat files
+cache
+artifacts

@@ -20,6 +20,6 @@
     "test/**/*",
     "typechain/**/*",
     "test/**/*",
-    "hardhat.config.ts"
+    "config.ts"
   ]
 }
